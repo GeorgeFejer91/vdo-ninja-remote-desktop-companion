@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remote desktop</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23121920'/%3E%3Crect x='12' y='14' width='40' height='30' rx='3' fill='none' stroke='%23b5e0f0' stroke-width='4'/%3E%3Cpath d='M24 52h16M32 44v8' stroke='%23b5e0f0' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <script type="module" crossorigin src="./assets/index-Cl9PQgJR.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-2tta5FOD.css">
+  </head>
+  <body>
+    <main class="companion-layout">
+      <header class="companion-header">
+        <h1 data-fit>Remote desktop</h1>
+        <span id="status" data-fit role="status">Enter the access password</span>
+      </header>
+      <form id="connect-form" class="connect-form">
+        <label for="password" data-fit>Access password</label>
+        <div class="connect-row">
+          <input id="password" type="password" autocomplete="off" spellcheck="false" required minlength="64" maxlength="64" />
+          <button type="submit" data-fit>Connect</button>
+        </div>
+      </form>
+      <section id="session" hidden>
+        <div class="screen-wrap">
+          <video id="screen" autoplay playsinline muted aria-label="Windows desktop"></video>
+        </div>
+        <div class="mouse-actions">
+          <button id="right-click" type="button" data-fit>Right click</button>
+          <button id="scroll-up" type="button" data-fit>Scroll up</button>
+          <button id="scroll-down" type="button" data-fit>Scroll down</button>
+        </div>
+        <section class="clipboard" aria-labelledby="clipboard-heading">
+          <h2 id="clipboard-heading" data-fit>Clipboard</h2>
+          <label for="remote-text" data-fit>Copied on laptop</label>
+          <textarea id="remote-text" readonly rows="3"></textarea>
+          <button id="copy-remote" type="button" data-fit>Copy to this device</button>
+          <label for="local-text" data-fit>Send to laptop</label>
+          <textarea id="local-text" rows="3" placeholder="Paste or type text here"></textarea>
+          <div class="clipboard-actions">
+            <button id="paste-local" type="button" data-fit>Paste from this device</button>
+            <button id="send-local" type="button" data-fit>Send to laptop</button>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

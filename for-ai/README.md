@@ -1,5 +1,9 @@
 # Repository context
 
+**Superseded 2026-10-02:** Active product source and Pages deployment moved to
+the public `GeorgeFejer91/ninja-desk` repository. This control plane below
+describes the former deployment process and is retained for history.
+
 This is the public **deployment repository** for the browser companion. The PC app and editable companion source live in the separate private `GeorgeFejer91/vdo-ninja-remote-desktop` repository.
 
 Read only what the task needs:

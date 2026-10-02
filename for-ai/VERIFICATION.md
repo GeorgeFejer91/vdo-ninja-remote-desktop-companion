@@ -4,7 +4,7 @@ Use `VERIFIED`, `PARTIAL`, `BLOCKED`, or `NOT RUN`; name the surface actually ob
 
 ## Bootstrap
 
-Run `powershell -NoProfile -ExecutionPolicy Bypass -File for-ai/scripts/check-context.ps1 -ProjectRoot . -RequireRemote` after publishing. It must pass with a clean tree and local `HEAD` equal to `origin/main`.
+Run `pwsh -NoProfile -File for-ai/scripts/check-context.ps1 -ProjectRoot . -RequireRemote` after publishing. It must pass with a clean tree and local `HEAD` equal to `origin/main`.
 
 ## Focused asset check
 

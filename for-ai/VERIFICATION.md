@@ -23,3 +23,10 @@ Review status and diff, stage intended paths only, commit, push without force, a
 - `VERIFIED`: The public GitHub Pages repository deployed static assets from the private source build, and the HTTPS page returned HTTP 200 with its password form.
 - `VERIFIED`: The generated host password was absent from the static text assets at publication.
 - `NOT RUN`: Live authenticated session from the GitHub Pages origin, physical phone, WAN/TURN route, and performance measurement.
+
+## 2026-10-02 phone navigation bundle
+
+- `VERIFIED`: The new static bundle was copied byte-for-byte from private PC app source commit `e8fceb0ec668597a2e415da49524218ddd86d3e1` after `npm run build`. Its HTML references the included hashed CSS and JS assets.
+- `VERIFIED`: A local preview of this browser UI authenticated to the existing Windows host and displayed live desktop video. The Display and Clipboard panels opened, zoom changed to 125%, and the mode control switched between mouse and touch.
+- `VERIFIED`: The generated host password is absent from the public repository text assets. GitHub Pages served the preceding phone-control bundle over HTTPS and returned HTTP 200 for its HTML, CSS, and JS.
+- `NOT RUN`: Authentication from this exact deployed bundle, physical phone gestures, WAN/TURN route, and performance measurement. The host is currently stopped until its password is replaced locally.

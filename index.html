@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Remote desktop</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23121920'/%3E%3Crect x='12' y='14' width='40' height='30' rx='3' fill='none' stroke='%23b5e0f0' stroke-width='4'/%3E%3Cpath d='M24 52h16M32 44v8' stroke='%23b5e0f0' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E" />
-    <script type="module" crossorigin src="./assets/index-Cl9PQgJR.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-2tta5FOD.css">
+    <script type="module" crossorigin src="./assets/index-phZa62b6.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DqvBU9xB.css">
   </head>
   <body>
     <main class="companion-layout">
@@ -22,15 +22,32 @@
         </div>
       </form>
       <section id="session" hidden>
-        <div class="screen-wrap">
+        <div class="session-bar">
+          <strong data-fit>Windows desktop</strong>
+          <button id="disconnect" type="button" data-fit>Disconnect</button>
+        </div>
+        <div class="screen-wrap" id="screen-wrap" aria-label="Remote desktop touch area">
           <video id="screen" autoplay playsinline muted aria-label="Windows desktop"></video>
         </div>
-        <div class="mouse-actions">
+        <div class="session-toolbar" aria-label="Remote controls">
+          <button id="mode" type="button" data-fit data-mode="mouse" aria-label="Input mode: mouse">Mouse mode</button>
           <button id="right-click" type="button" data-fit>Right click</button>
-          <button id="scroll-up" type="button" data-fit>Scroll up</button>
-          <button id="scroll-down" type="button" data-fit>Scroll down</button>
+          <button id="scroll-up" type="button" aria-label="Scroll up" title="Scroll up">↑</button>
+          <button id="scroll-down" type="button" aria-label="Scroll down" title="Scroll down">↓</button>
+          <button id="display-options" type="button" data-fit aria-expanded="false" aria-controls="view-options">Display</button>
+          <button id="clipboard-toggle" type="button" data-fit aria-expanded="false" aria-controls="clipboard">Clipboard</button>
         </div>
-        <section class="clipboard" aria-labelledby="clipboard-heading">
+        <div id="view-options" class="view-options" hidden>
+          <span data-fit>View</span>
+          <button id="fit-view" type="button" data-fit>Fit</button>
+          <button id="actual-view" type="button" data-fit>Actual size</button>
+          <button id="zoom-out" type="button" aria-label="Zoom out">−</button>
+          <output id="zoom-level" aria-live="polite">100%</output>
+          <button id="zoom-in" type="button" aria-label="Zoom in">+</button>
+          <button id="reset-view" type="button" data-fit>Reset view</button>
+          <p class="gesture-help">Mouse mode: drag a finger to move the pointer, tap to click. Touch mode: tap or drag directly. Double tap and hold to drag in mouse mode. Two fingers tap for right click; pinch to zoom; three fingers drag to scroll.</p>
+        </div>
+        <section id="clipboard" class="clipboard" aria-labelledby="clipboard-heading" hidden>
           <h2 id="clipboard-heading" data-fit>Clipboard</h2>
           <label for="remote-text" data-fit>Copied on laptop</label>
           <textarea id="remote-text" readonly rows="3"></textarea>

@@ -6,6 +6,6 @@
 
 **Authority boundary:** The static page may collect a host password at runtime and initiate an encrypted browser-to-host session. It contains no password, desktop content, privileged proxy, or native command authority. The Rust PC app checks authorization before applying mouse or clipboard commands.
 
-**Current verified state:** GitHub Pages serves <https://georgefejer91.github.io/vdo-ninja-remote-desktop-companion/> over HTTPS and renders the password form. A browser session from a different network and a physical phone have not yet been verified at this origin.
+**Current verified state:** GitHub Pages serves <https://georgefejer91.github.io/vdo-ninja-remote-desktop-companion/> over HTTPS and renders the password form. The source PC app now includes phone navigation controls; their deployment and phone testing are recorded in `VERIFICATION.md`. A browser session from a different network and a physical phone have not yet been verified at this origin.
 
 **Non-goals for this repository:** PC app binaries, Rust source, credentials, server-side Pages authentication, and a second implementation of the companion.
